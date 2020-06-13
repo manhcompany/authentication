@@ -1,0 +1,10 @@
+@(tbs: Seq[String])(implicit request: MessagesRequestHeader)
+
+@main("Tables") {
+    <ul>
+        <h2>Tables</h2>
+        @for(t <- tbs) {
+            <li>@t</li>
+        }
+    </ul>
+}

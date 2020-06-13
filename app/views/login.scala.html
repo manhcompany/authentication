@@ -1,0 +1,43 @@
+@(userLoginForm: Form[UserLogin])(implicit messagesRequestHeader: MessagesRequestHeader, flash: Flash)
+@import helper._
+
+@implicitField = @{
+    FieldConstructor(views.html.form.helpers.inputFieldHelper.render)
+}
+
+@main("Login") {
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+            @helper.form(action = routes.LoginController.validateLogin()) {
+                @CSRF.formField
+                <label class="text-danger">@flash.get("login_message").getOrElse("")</label>
+                <div class="form-group">
+                    <label>Email address</label>
+                    @helper.inputText(userLoginForm("email"), Symbol("class") -> "form-control")
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    @helper.inputPassword(userLoginForm("password"), Symbol("class") -> "form-control")
+                </div>
+
+                <input type="submit" value="Sign in" class="btn btn-primary">
+            }
+            <br>
+            <div class="form-group signup">
+                <div>
+                    <label>New arround here?&nbsp;</label>
+                </div>
+                <div>
+                    <a href="@routes.LoginController.register()">  Sign up</a>
+                </div>
+
+                <br>
+                @* <label>Forgot password</label>*@
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+}

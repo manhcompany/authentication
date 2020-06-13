@@ -1,0 +1,99 @@
+.form-input-text {
+
+}
+
+/*HEADER*/
+
+.header {
+    background: var(--gray-dark);
+    height: 3rem;
+    display: flex;
+    align-items: baseline;
+
+
+}
+
+.header__logo {
+    display: flex;
+    color: var(--white);
+    padding-top: 0.25rem;
+    align-items: center;
+}
+
+.header__home_link {
+    display: flex;
+    color: var(--white);
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.2s linear;
+}
+
+.header__home_link:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.header_nav {
+    margin-right: 0rem;
+    margin-left: auto;
+}
+
+.header__nav_list {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.header__nav_item {
+    margin-left: 1.5rem;
+    align-items: center;
+}
+
+.nav_link {
+    color: var(--white);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav_link:hover{
+    color: var(--white);
+    text-decoration: none;
+}
+
+.header__nav_email {
+    color: var(--white);
+}
+
+
+/*CONTENT*/
+
+.content {
+    height: 100vh;
+    margin-top: 3rem;
+}
+
+.menu-group-header {
+    font-size: 0.9rem;
+    color: var(--gray-light);
+    font-weight: bolder;
+}
+
+.menu-item {
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+
+/*FOOTER*/
+
+.footer {
+    height: auto;
+    background: var(--gray-light);
+}
+
+/*LOGIN*/
+.signup {
+    display: flex;
+}
